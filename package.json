@@ -1,0 +1,52 @@
+{
+	"name": "strip-combining-marks",
+	"version": "0.1.0",
+	"description": "Easily remove Unicode combining marks from strings.",
+	"homepage": "http://mths.be/stripcombiningmarks",
+	"main": "strip-combining-marks.js",
+	"keywords": [
+		"combining-marks",
+		"string",
+		"strip",
+		"unicode"
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://mths.be/mit"
+		}
+	],
+	"author": {
+		"name": "Mathias Bynens",
+		"url": "http://mathiasbynens.be/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mathiasbynens/strip-combining-marks.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mathiasbynens/strip-combining-marks/issues"
+	},
+	"files": [
+		"LICENSE-MIT.txt",
+		"strip-combining-marks.js"
+	],
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"test": "node tests/tests.js"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-shell": "~0.5.0",
+		"grunt-template": "~0.2.1",
+		"istanbul": "~0.1.44",
+		"qunit-clib": "~1.3.0",
+		"qunitjs": "~1.11.0",
+		"regenerate": "~0.5.4",
+		"requirejs": "~2.1.9",
+		"unicode-6.3.0": "~0.1.1"
+	}
+}

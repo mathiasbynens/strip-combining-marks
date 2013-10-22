@@ -1,0 +1,16 @@
+{
+	"name": "strip-combining-marks",
+	"version": "0.1.0",
+	"description": "Easily remove Unicode combining marks from strings.",
+	"repo": "mathiasbynens/strip-combining-marks",
+	"license": "MIT",
+	"scripts": [
+		"strip-combining-marks.js"
+	],
+	"keywords": [
+		"combining-marks",
+		"string",
+		"strip",
+		"unicode"
+	]
+}
