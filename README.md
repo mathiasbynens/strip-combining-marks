@@ -1,4 +1,4 @@
-# strip-combining-marks [![Build status](https://travis-ci.org/mathiasbynens/strip-combining-marks.png?branch=master)](https://travis-ci.org/mathiasbynens/strip-combining-marks) [![Dependency status](https://gemnasium.com/mathiasbynens/strip-combining-marks.png)](https://gemnasium.com/mathiasbynens/strip-combining-marks)
+# strip-combining-marks [![Build status](https://travis-ci.org/mathiasbynens/strip-combining-marks.svg?branch=master)](https://travis-ci.org/mathiasbynens/strip-combining-marks) [![Dependency status](https://gemnasium.com/mathiasbynens/strip-combining-marks.svg)](https://gemnasium.com/mathiasbynens/strip-combining-marks)
 
 _strip-combining-marks_ removes Unicode combining marks from strings. It leaves unmatched combining marks (i.e. marks that appear at the start of the string, and don’t belong to a symbol) intact.
 

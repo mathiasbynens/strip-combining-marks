@@ -20,7 +20,6 @@
 	var regexSymbolWithCombiningMarks = /(<%= allExceptCombiningMarks %>)(<%= combiningMarks %>+)/g;
 
 	var stripCombiningMarks = function(string) {
-		// Step 1: deal with combining marks and astral symbols (surrogate pairs)
 		return string
 			// Remove any combining marks that actually belong to a symbol
 			.replace(regexSymbolWithCombiningMarks, '$1');
