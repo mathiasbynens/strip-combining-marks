@@ -21,12 +21,12 @@ require(unicodePackage).blocks.forEach(function(block) {
 // All code points except those that map to combining marks
 var allExceptCombiningMarks = regenerate()
 	.addRange(0x000000, 0x10FFFF)
-	.remove(combiningMarks.toArray());
+	.remove(combiningMarks);
 
 module.exports = {
 	'combiningMarks': combiningMarks.toString(),
 	'allExceptCombiningMarks': allExceptCombiningMarks.toString(),
-	'highSurrogates': regenerate.fromCodePointRange(0xD800, 0xDBFF),
-	'lowSurrogates': regenerate.fromCodePointRange(0xDC00, 0xDFFF),
+	'highSurrogates': regenerate().addRange(0xD800, 0xDBFF).toString(),
+	'lowSurrogates': regenerate().addRange(0xDC00, 0xDFFF).toString(),
 	'version': packageInfo.version
 };

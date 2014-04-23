@@ -43,9 +43,7 @@
 		if (freeModule) { // in Node.js or RingoJS v0.8.0+
 			freeModule.exports = stripCombiningMarks;
 		} else { // in Narwhal or RingoJS v0.7.0-
-			for (var key in stripCombiningMarks) {
-				stripCombiningMarks.hasOwnProperty(key) && (freeExports[key] = stripCombiningMarks[key]);
-			}
+			freeExports.stripCombiningMarks = stripCombiningMarks;
 		}
 	} else { // in Rhino or a web browser
 		root.stripCombiningMarks = stripCombiningMarks;
