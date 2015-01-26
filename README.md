@@ -4,7 +4,7 @@ _strip-combining-marks_ removes Unicode combining marks from strings. It leaves 
 
 ## Installation
 
-Via [npm](http://npmjs.org/):
+Via [npm](https://www.npmjs.com/):
 
 ```bash
 npm install strip-combining-marks
@@ -28,7 +28,7 @@ In a browser:
 <script src="strip-combining-marks.js"></script>
 ```
 
-In [Narwhal](http://narwhaljs.org/), [Node.js](http://nodejs.org/), and [RingoJS](http://ringojs.org/):
+In [Node.js](https://nodejs.org/), [io.js](https://iojs.org/), [Narwhal](http://narwhaljs.org/), and [RingoJS](http://ringojs.org/):
 
 ```js
 var stripCombiningMarks = require('strip-combining-marks');
@@ -75,7 +75,7 @@ stripCombiningMarks('Z͑ͫ̓ͪ̂ͫ̽͏̴̙̤̞͉͚̯̞̠͍A̴̵̜̰͔ͫ͗͢Lͨͧ
 
 ## Support
 
-strip-combining-marks has been tested in Chrome 27-29, Firefox 3-24, Safari 4-6, Opera 10-17, IE 6-11, Node.js v0.10.0, Narwhal 0.3.2, RingoJS 0.8-0.9, PhantomJS 1.9.1, and Rhino 1.7RC4.
+strip-combining-marks has been tested in Chrome 27, Firefox 3, Safari 4, Opera 10, IE 6, Node.js v0.10.0, io.js v1.0.0, Narwhal 0.3.2, RingoJS 0.8, PhantomJS 1.9.1, and Rhino 1.7RC4.
 
 ## Unit tests & code coverage
 
@@ -89,8 +89,8 @@ To generate the code coverage report, use `grunt cover`.
 
 | [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
-| [Mathias Bynens](http://mathiasbynens.be/) |
+| [Mathias Bynens](https://mathiasbynens.be/) |
 
 ## License
 
-strip-combining-marks is available under the [MIT](http://mths.be/mit) license.
+strip-combining-marks is available under the [MIT](https://mths.be/mit) license.

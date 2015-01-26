@@ -1,4 +1,4 @@
-/*! http://mths.be/stripcombiningmarks v<%= version %> by @mathias */
+/*! https://mths.be/stripcombiningmarks v<%= version %> by @mathias */
 ;(function(root) {
 
 	// Detect free variables `exports`
