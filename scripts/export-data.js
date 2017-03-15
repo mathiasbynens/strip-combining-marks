@@ -1,29 +1,35 @@
-var regenerate = require('regenerate');
-var fs = require('fs');
+'use strict';
 
-var packageInfo = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+const fs = require('fs');
+const regenerate = require('regenerate');
 
-var unicodePackage = Object.keys(packageInfo.devDependencies).find(function(key) {
+const packageInfo = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+
+const unicodePackage = Object.keys(packageInfo.devDependencies).find((key) => {
 	return /^unicode-/.test(key);
 });
 
 // All types of combining marks
-var combiningMarks = regenerate();
-require(unicodePackage).blocks.forEach(function(block) {
+const combiningMarks = regenerate();
+for (const block of require(unicodePackage).Block) {
 	if (/^Combining/.test(block)) {
 		combiningMarks.add(
-			require(unicodePackage + '/blocks/' + block + '/code-points')
+			require(`${unicodePackage}/Block/${ block }/code-points.js`)
 		);
 	}
-});
+}
+const lineBreakCombiningMarks = regenerate(
+	require(`${unicodePackage}/Line_Break/Combining_Mark/code-points.js`)
+);
 
 // All code points except those that map to combining marks
-var allExceptCombiningMarks = regenerate()
+const allExceptCombiningMarks = regenerate()
 	.addRange(0x000000, 0x10FFFF)
 	.remove(combiningMarks);
 
 module.exports = {
 	'combiningMarks': combiningMarks.toString(),
+	'lineBreakCombiningMarks': lineBreakCombiningMarks.toString(),
 	'allExceptCombiningMarks': allExceptCombiningMarks.toString(),
 	'highSurrogates': regenerate().addRange(0xD800, 0xDBFF).toString(),
 	'lowSurrogates': regenerate().addRange(0xDC00, 0xDFFF).toString(),

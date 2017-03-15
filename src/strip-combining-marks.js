@@ -18,10 +18,13 @@
 	/*--------------------------------------------------------------------------*/
 
 	var regexSymbolWithCombiningMarks = /(<%= allExceptCombiningMarks %>)(<%= combiningMarks %>+)/g;
+	var regexLineBreakCombiningMarks = /<%= lineBreakCombiningMarks %>/g;
 
 	var stripCombiningMarks = function(string) {
 		return string
-			// Remove any combining marks that actually belong to a symbol
+			// Remove any `Line_Break=Combining_Mark` characters.
+			.replace(regexLineBreakCombiningMarks, '')
+			// Remove any combining marks that actually belong to a symbol.
 			.replace(regexSymbolWithCombiningMarks, '$1');
 	};
 
