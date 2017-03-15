@@ -1,4 +1,4 @@
-/*! https://mths.be/stripcombiningmarks v0.1.0 by @mathias */
+/*! https://mths.be/stripcombiningmarks v1.0.0 by @mathias */
 ;(function(root) {
 
 	// Detect free variables `exports`
@@ -28,7 +28,7 @@
 			.replace(regexSymbolWithCombiningMarks, '$1');
 	};
 
-	stripCombiningMarks.version = '0.1.0';
+	stripCombiningMarks.version = '1.0.0';
 
 	/*--------------------------------------------------------------------------*/
 

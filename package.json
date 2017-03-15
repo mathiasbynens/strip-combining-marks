@@ -1,6 +1,6 @@
 {
   "name": "strip-combining-marks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Easily remove Unicode combining marks from strings.",
   "homepage": "https://mths.be/stripcombiningmarks",
   "main": "strip-combining-marks.js",
